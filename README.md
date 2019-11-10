@@ -20,8 +20,8 @@ Node.js 8.10.x
 Npm 5 or above
 Typescript 2.4 or above
 DynamoDB local
-Serverless Framework 1.x
-AWS Lambda, DynamoDB, SQS, SNS, IAM and API Gateway
+Jest
+Serverless Framework 
 ```
 
 ### Installing
@@ -33,7 +33,7 @@ Run npm install in project dir
 ```
 
 
-##Exections of Unit Tests
+#Execution of Unit Tests
 ```
 Run npm test in project dir
 ```
