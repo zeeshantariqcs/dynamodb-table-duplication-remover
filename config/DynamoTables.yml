@@ -1,0 +1,3 @@
+Resources:
+  CustomerProductTable: ${file(config/dynamo/CustomerProductTable.yml)}
+  NewCustomerProductTable: ${file(config/dynamo/NewCustomerProductTable.yml)}

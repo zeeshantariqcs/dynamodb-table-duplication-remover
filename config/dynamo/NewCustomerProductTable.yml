@@ -1,0 +1,27 @@
+Type: AWS::DynamoDB::Table
+Properties:
+  TableName: NewCustomerProductTable
+  AttributeDefinitions:
+    - AttributeName: uid
+      AttributeType: S
+    - AttributeName: pid
+      AttributeType: S
+
+  KeySchema:
+    - AttributeName: uid
+      KeyType: HASH
+    - AttributeName: pid
+      KeyType: RANGE
+  
+  ProvisionedThroughput:
+    ReadCapacityUnits: 5
+    WriteCapacityUnits: 5     
+
+  PointInTimeRecoverySpecification:
+    PointInTimeRecoveryEnabled: true      
+  
+  # StreamSpecification:
+  #   StreamViewType: NEW_AND_OLD_IMAGES
+  
+  SSESpecification:
+    SSEEnabled: true

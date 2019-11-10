@@ -1,0 +1,48 @@
+Type: AWS::DynamoDB::Table
+Properties:
+  TableName: CustomerProductTable
+  AttributeDefinitions:
+    - AttributeName: id
+      AttributeType: S
+    - AttributeName: uid
+      AttributeType: S
+    - AttributeName: pid
+      AttributeType: S
+
+  KeySchema:
+    - AttributeName: id
+      KeyType: HASH
+
+  ProvisionedThroughput:
+    ReadCapacityUnits: 5
+    WriteCapacityUnits: 5       
+  # PointInTimeRecoverySpecification:
+  #   PointInTimeRecoveryEnabled: true      
+  # BillingMode: PAY_PER_REQUEST
+  
+  GlobalSecondaryIndexes:
+    - IndexName: uid-index
+      KeySchema:
+        - AttributeName: uid
+          KeyType: HASH
+      Projection:
+        ProjectionType: ALL
+      ProvisionedThroughput:
+        ReadCapacityUnits: 5
+        WriteCapacityUnits: 5            
+
+    - IndexName: pid-index
+      KeySchema:
+        - AttributeName: pid
+          KeyType: HASH
+      Projection:
+        ProjectionType: ALL
+      ProvisionedThroughput:
+        ReadCapacityUnits: 5
+        WriteCapacityUnits: 5            
+
+  # StreamSpecification:
+  #   StreamViewType: NEW_AND_OLD_IMAGES
+
+  SSESpecification:
+    SSEEnabled: true
