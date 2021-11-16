@@ -43,7 +43,7 @@
     "@aws/dynamodb-data-mapper-annotations": "^0.7.3",
     "@types/faker": "^4.1.7",
     "@types/node": "^12.12.6",
-    "aws-sdk": "^2.561.0",
+    "aws-sdk": "^2.814.0",
     "faker": "^4.1.0",
     "serverless-webpack": "^5.3.1"
   }
