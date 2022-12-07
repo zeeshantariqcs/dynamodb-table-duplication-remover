@@ -32,7 +32,7 @@
     "@shelf/jest-dynamodb": "^1.4.1",
     "@types/jest": "^24.0.22",
     "jest": "^24.9.0",
-    "serverless": "^1.57.0",
+    "serverless": "^3.25.1",
     "ts-jest": "^24.1.0",
     "ts-loader": "^6.2.1",
     "ts-node": "^8.4.1",
